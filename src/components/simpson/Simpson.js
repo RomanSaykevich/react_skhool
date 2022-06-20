@@ -1,9 +1,11 @@
 import React from 'react';
 
+import('./Simpson.css')
+
 const Simpson = (props) => {
     const {name, photo, age, sex, status, history} = props;
     return (
-        <div>
+        <div className={'simpson'}>
             <h2>{name}</h2>
             <img src={photo} alt=""/>
             <p>Age: {age} </p>
