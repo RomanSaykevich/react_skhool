@@ -1,26 +1,24 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 
-
-import Posts from "../../Components/Posts/Posts";
 import {getPostsId} from "../../services/posts.service/posts.service";
+import {Posts} from "../../Components";
 
 const PostPage = () => {
 
-    const [posts, setPosts] = useState(null)
+    const [posts, setPosts] = useState([])
 
-    const {id} = useParams()
+    const {postId} = useParams()
 
-    useEffect((id) => {
-            getPostsId(id)
-                .then(({data}) => setPosts([...data]))
-
-    }, [id])
+    useEffect(() => {
+            getPostsId(postId)
+                .then(value=> setPosts([{...value}]))
+    }, [postId])
 
     return (
         <div>
             {
-                posts.map(post => <Posts key={post.id} post={post}/>)
+                posts.map(value =><Posts item={value} key={value.id}/>)
             }
         </div>
     );

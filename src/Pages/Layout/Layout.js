@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, Outlet} from "react-router-dom";
 
-const LayoutPage = () => {
+const Layout = () => {
     return (
         <div>
             <div>
@@ -11,10 +11,9 @@ const LayoutPage = () => {
                     <li><Link to={'comments'}>Comments</Link></li>
                 </ol>
             </div>
-
             <Outlet/>
         </div>
     );
 };
 
-export default LayoutPage;
+export default Layout;

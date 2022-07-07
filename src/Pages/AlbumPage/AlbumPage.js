@@ -1,14 +1,15 @@
 import React, {useEffect, useState} from 'react';
 
-import Album from "../../Components/Album/Album";
+
 import {getAlbums} from "../../services/albums.service/albums.service";
+import {Album} from "../../Components";
 
 
 const AlbumPage = () => {
     const [albums, setAlbums] = useState([])
 
     useEffect(() => {
-        getAlbums().then(({data}) => setAlbums([...data]))
+        getAlbums().then(value => setAlbums([...value]))
     }, [])
 
     return (
