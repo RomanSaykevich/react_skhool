@@ -7,12 +7,13 @@ import {getPostsId} from "../../services/posts.service/posts.service";
 
 const PostPage = () => {
 
-    const [posts, setPosts] = useState([])
+    const [posts, setPosts] = useState(null)
 
     const {id} = useParams()
 
     useEffect((id) => {
-            getPostsId(id).then(({data}) => setPosts([...data]))
+            getPostsId(id)
+                .then(({data}) => setPosts([...data]))
 
     }, [id])
 
