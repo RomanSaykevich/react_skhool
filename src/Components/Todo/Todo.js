@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Todo = (todo) => {
+const Todo = ({todo}) => {
 
     return (
         <div>
-           {todo.title}------
+            {todo.id} - {todo.title} -- {todo.completed.toString()}
         </div>
     );
 };

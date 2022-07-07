@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link, Routes, Route} from "react-router-dom";
 
-import {AlbomPage, CommentsPage, HomePage, LayoutPage, TodosPage} from "./Pages";
+import {AlbumPage, CommentsPage, HomePage, LayoutPage, PostPage, TodosPage} from "./Pages";
+
 
 
 const App = () => {
@@ -20,7 +21,10 @@ const App = () => {
                     <Route index element={<HomePage/>}/>
                     <Route path={'/layout'} element={<LayoutPage/>}>
                         <Route path={'todos'} element={<TodosPage/>}/>
-                        <Route path={'alboms'} element={<AlbomPage/>}/>
+                        <Route path={'albums'} element={<AlbumPage/>}/>
+                        <Route path={'comments'} element={<CommentsPage/>}>
+                            <Route path={':id'} element={<PostPage/>}/>
+                        </Route>
                     </Route>
                 </Routes>
             </div>

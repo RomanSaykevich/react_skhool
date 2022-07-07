@@ -5,11 +5,9 @@ const LayoutPage = () => {
     return (
         <div>
             <div>
-
-
                 <ol>
                     <li><Link to={'todos'}>Todos</Link></li>
-                    <li><Link to={'alboms'}>Alboms</Link></li>
+                    <li><Link to={'albums'}>Albums</Link></li>
                     <li><Link to={'comments'}>Comments</Link></li>
                 </ol>
             </div>

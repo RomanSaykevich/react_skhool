@@ -8,7 +8,7 @@ import Todo from "../../Components/Todo/Todo";
 
 const TodosPage = () => {
 
-    const [todo, setTodo] = useState([])
+    const [todos, setTodo] = useState([])
 
     useEffect(()=>{
         getTodos().then(({data}) => setTodo([...data]))
@@ -16,7 +16,7 @@ const TodosPage = () => {
     return (
         <div>
             {
-                todo.map(value => <Todo key={todo.id} todo={value}/>)
+                todos.map(todo => <Todo key={todo.id} todo={todo}/>)
             }
 
         </div>
