@@ -1,11 +1,21 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const App = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
+import {Comments, Posts, Users} from "./Components";
+
+class App extends Component {
+
+
+    render() {
+        return (
+            <div>
+                <Users/>
+                <hr/>
+                <Posts/>
+                <hr/>
+                <Comments/>
+            </div>
+        );
+    }
+}
 
 export default App;
