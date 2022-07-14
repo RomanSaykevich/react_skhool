@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 
-import {getTodos} from "../../services/todo.service/todo.service";
 import {Todo} from "../../Components";
+import {getTodos} from "../../Services/todo.service/todo.service";
 
 const TodosPage = () => {
 
     const [todos, setTodo] = useState([])
-
+н
     useEffect(()=>{
         getTodos()
             .then(value => setTodo([...value]))

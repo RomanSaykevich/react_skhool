@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 
-import {getPostsId} from "../../services/posts.service/posts.service";
 import {Posts} from "../../Components";
+import {getPostsId} from "../../Services/posts.service/posts.service";
 
 const PostPage = () => {
 

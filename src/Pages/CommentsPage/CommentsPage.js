@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
-
-import {getComments} from "../../services/comment.service/comments.service";
 import {Comments} from "../../Components";
+import {getComments} from "../../Services/comment.service/comments.service";
+
 
 
 const CommentsPage = () => {

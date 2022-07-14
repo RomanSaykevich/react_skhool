@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
-
-import {getAlbums} from "../../services/albums.service/albums.service";
 import {Album} from "../../Components";
+import {getAlbums} from "../../Services/albums.service/albums.service";
 
 
 const AlbumPage = () => {
